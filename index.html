@@ -37,7 +37,7 @@
         <p>Feel free to customize and add more content!</p>
 
         <div class="parameter-display">
-            <h3>Welcome <span id="user-parameter"></span>!</h3>
+            <h3 id="welcome-message">Welcome {{ USER_ID }}!</h3>
         </div>
     </div>
 
@@ -47,8 +47,8 @@
         const userValue = urlParams.get('user');
 
         // Update the content with the user value
-        const userParameter = document.getElementById('user-parameter');
-        userParameter.textContent = userValue;
+        const welcomeMessage = document.getElementById('welcome-message');
+        welcomeMessage.textContent = welcomeMessage.textContent.replace('{{ USER_ID }}', userValue);
     </script>
 </body>
 </html>
