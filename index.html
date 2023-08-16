@@ -48,7 +48,7 @@
 
         // Update the content with the user value
         const welcomeMessage = document.getElementById('welcome-message');
-        welcomeMessage.textContent = welcomeMessage.textContent.replace('{{ USER_ID }}', userValue);
+        welcomeMessage.innerHTML = welcomeMessage.innerHTML.replace('{{ USER_ID }}', userValue);
     </script>
 </body>
 </html>
