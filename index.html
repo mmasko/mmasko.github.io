@@ -35,6 +35,20 @@
         <h2>Welcome to My Simple Site</h2>
         <p>This is a basic HTML site with some simple CSS styling.</p>
         <p>Feel free to customize and add more content!</p>
+
+        <div class="parameter-display">
+            <h3>Welcome <span id="user-parameter"></span>!</h3>
+        </div>
     </div>
+
+    <script>
+        // Get the user parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const userValue = urlParams.get('user');
+
+        // Update the content with the user value
+        const userParameter = document.getElementById('user-parameter');
+        userParameter.textContent = userValue;
+    </script>
 </body>
 </html>
